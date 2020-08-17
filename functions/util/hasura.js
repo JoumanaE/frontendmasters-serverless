@@ -9,11 +9,7 @@ async function query({ query, variables = {} }) {
       "X-Hasura-Admin-Secret": process.env.HASURA_ADMIN_SECRET,
     },
     body: JSON.stringify({ query, variables }),
-  })
-    .then((response) => response.json())
-    .catch((response) => console.log("===> error: ", response));
-
-  console.log(result);
+  }).then((response) => response.json());
 
   return result.data;
 }

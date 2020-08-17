@@ -28,7 +28,6 @@ exports.handler = async () => {
       .then((response) => response.json())
       .then((data) => {
         const scores = data.Ratings;
-        console.log(data);
 
         return {
           ...movie,
