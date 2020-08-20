@@ -57,7 +57,7 @@ On Hasura, once you create a new project, add a new env var, Admin Secret, by cl
 ![Config Var Hasura](/img/env-var.png)
 
 Launch the Hasura console and make sure that your graphQL endpoint is no longer public.
-![GraphQL Endpoint](/img/GraphQL-env)
+![GraphQL Endpoint](/img/GraphQL-endpoint.png)
 
 ## License
 
