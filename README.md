@@ -37,12 +37,27 @@ Save all of these in `.env`:
 - `HASURA_API_URL` — get this from https://hasura.io/
 - `HASURA_ADMIN_SECRET` — get this from https://hasura.io/
 
+Make sure to install dotenv `npm install dotenv` and add `require("dotenv").config()` to each file that uses one of the environment variables.
+
 ## Resources
 
 - [Netlify Functions](https://www.netlify.com/products/functions/?utm_source=fem-sls&utm_medium=functions-jl&utm_campaign=devex)
 - [Netlify Identity](https://docs.netlify.com/visitor-access/identity/?utm_source=fem-sls&utm_medium=functions-jl&utm_campaign=devex)
 - [Hasura](https://cloud.hasura.io/)
 - [Heroku](https://www.heroku.com/)
+
+## Using Hasura & Heroku to create a secret Admin Key:
+
+Create a Hasura account, and link it to a Heroku account.
+
+Go to Settings on your Heroku account and add config vars HASURA_ADMIN_SECRET, HASURA_GRAPHQL_ADMIN_SECRET.
+![Config Var Heroku](/img/config-vars.png)
+
+On Hasura, once you create a new project, add a new env var, Admin Secret, by clicking on **New Env Var** and creating Admin Secret.
+![Config Var Hasura](/img/env-var.png)
+
+Launch the Hasura console and make sure that your graphQL endpoint is no longer public.
+![GraphQL Endpoint](/img/GraphQL-env)
 
 ## License
 

@@ -68,9 +68,13 @@
   </div>
 </template>
 
+<script
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+  type="text/javascript"
+></script>
+
 <script>
   function addScores(element, scores) {
-    console.log(element, scores);
     scores.forEach((score) => {
       const item = document.createElement("li");
       const label = document.createElement("span");
